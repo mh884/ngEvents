@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core'
 import { EventService } from '../sheard/event.service'
 import{ActivatedRoute} from '@angular/router'
+import{IEvent} from  '../sheard/index'
 @Component({
     templateUrl: '/app/events/event-details/event-details.compontent.html'
     , styles: [
@@ -13,7 +14,7 @@ import{ActivatedRoute} from '@angular/router'
 
 export class EventDetailsComponent implements OnInit {
 
-      event: any
+      event: IEvent
     constructor(private eventSerivce: EventService,private route:ActivatedRoute) { }
 
     ngOnInit(): void {

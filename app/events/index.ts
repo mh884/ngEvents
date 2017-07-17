@@ -1,0 +1,6 @@
+export * from './create.event.componet'
+export * from './events-list.componet'
+export * from './events-thumbnail.componet'
+export * from './events.list.resolver.service'
+export * from  './sheard/index'
+export * from './event-details/index'

@@ -1,8 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
+import {IEvent} from './Sheard/index'
 @Component({
     selector: 'events-thumbnail',
     template: `
-    <div class="well hoverwell thombnail">
+    <div [routerLink]="['/events',event.id]" class="well hoverwell thombnail">
 <h2>{{event?.name}}</h2>
 <div>Date:{{event?.date}}<div>
 <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
@@ -33,7 +34,7 @@ online URL:{{event?.onlineUrl}}
 })
 
 export class EventsThumbnailComponents {
-    @Input() event: any
+    @Input() event: IEvent
 
     getStartTimeClass(){
 if( this.event && this.event.time ==='8:00 am')
